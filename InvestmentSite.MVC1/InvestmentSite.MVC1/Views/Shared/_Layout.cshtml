@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ETF Calculator</title>
 
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
 
     <script src="js/calculationsLogic.js" defer></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js" defer></script>
@@ -23,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link " href="Sites/Home/home.html">Home</a>
+                        <a class="nav-link " asp-controller="Home" asp-action="Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Pricing</a>
+                        <a class="nav-link "asp-controller="Home" asp-action="Pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="Sites/About/about.html">About</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
                     </li>
                     <li>
                         <div class="dropdown">
