@@ -1,53 +1,53 @@
 ﻿@using InvestmentSite.MVC1.Models
 @model Portfolio
 @{
-    Layout = "_Layout";
+	Layout = "_Layout";
 }
 
 <div>
-          <!--
-              <h1>Expense Items</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-            </tr>
-        </thead>
-        <tbody>
-    @foreach (var expenseItem in Model.ExpenseItems)
-    {
-                    <tr>
-                     <td>
-                            <a asp-controller="ExpenseItems" asp-action="GetExpenseItem" asp-route-id="@expenseItem.Id">
-                                View Details
-                            </a>
-                     </td>
 
-                    </tr>
-    }
-        </tbody>
-            </table>
-          -->  
+	<h1>Expense Items</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var expenseItem in Model.ExpenseItems)
+			{
+				<tr>
+					<td>
+						<a asp-controller="ExpenseItems" asp-action="GetExpenseItem" asp-route-id="@expenseItem.Id">
+							@expenseItem.Id
+						</a>
+					</td>
+
+				</tr>
+			}
+		</tbody>
+	</table>
 
 
-    <h1>Income Items</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var incomeItem in Model.IncomeItems)
-            {
-                <tr>
-                    <td>@incomeItem.Id</td>
-                    <td>@incomeItem.Amount</td>
-                    <td>@incomeItem.IncomeType!.Type</td>
-                </tr>
-            }
-        </tbody>
 
-    </table>
+	<h1>Income Items</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var incomeItem in Model.IncomeItems)
+			{
+				<tr>
+					<td>@incomeItem.Id</td>
+					<td>@incomeItem.Amount</td>
+					<td>@incomeItem.IncomeType!.Type</td>
+				</tr>
+			}
+		</tbody>
+
+	</table>
 </div>

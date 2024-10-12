@@ -5,21 +5,20 @@ using System.Linq;
 
 namespace InvestmentSite.MVC1.Controllers
 {
-    public class ExpenseItemsController : Controller
-    {
-        private readonly InvestmentContext _context;
+	public class ExpenseItemsController : Controller
+	{
+		private readonly InvestmentContext _context;
 
-        public ExpenseItemsController(InvestmentContext context)
-        {
-            _context = context;
-        }
+		public ExpenseItemsController(InvestmentContext context)
+		{
+			_context = context;
+		}
 
-        public IActionResult GetExpenseItem(int id)
-        {
-            ExpenseItem? findId = _context.ExpenseItems.Where(e => e.Id == id).FirstOrDefault();
+		public IActionResult GetExpenseItem(int id)
+		{
+			ExpenseItem? expenseItem = _context.ExpenseItems.Find(id);
 
-            return View("GetExpenseItem");
-                   
-        }
-    }
+			return expenseItem is null ? NotFound() : View(expenseItem);
+		}
+	}
 }
