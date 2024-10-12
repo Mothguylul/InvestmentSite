@@ -5,26 +5,31 @@
 }
 
 <div>
-            <h1>Expense Items</h1>
+          <!--
+              <h1>Expense Items</h1>
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Amount</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var expenseItem in Model.ExpenseItems)
-            {
-                <tr>
-                    <td>@expenseItem.Id</td>
-                    <td>@expenseItem.Amount</td>
-                    <td>@expenseItem.ExpenseType!.Type</td>
-                </tr>
-            }
-        </tbody>
+    @foreach (var expenseItem in Model.ExpenseItems)
+    {
+                    <tr>
+                     <td>
+                            <a asp-controller="ExpenseItems" asp-action="GetExpenseItem" asp-route-id="@expenseItem.Id">
+                                View Details
+                            </a>
+                     </td>
 
-    </table>
+                    </tr>
+    }
+        </tbody>
+            </table>
+          -->  
+
+
     <h1>Income Items</h1>
     <table>
         <thead>
