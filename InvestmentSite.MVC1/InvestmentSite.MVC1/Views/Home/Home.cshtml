@@ -2,7 +2,70 @@
     Layout = "_Layout";
 }
 
-<div class="container-fluid">
-    <h1>yoyoyo</h1>
-    <p>wassup thats a paragraph</p>
-</div>
+<style> /*css */
+    body {
+        background-color: #111010;
+    }
+
+    #headerLine {
+        color: #fff;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 900;
+        font-size: 100px;
+        height: 50px;
+    }
+
+    #headerParagraph {
+        color: #fff;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        font-size: 35px;
+    }
+
+    #line{
+        height:3px;
+        width:max-content;
+        color:white;
+    }
+
+    .custom-row {
+        height: 500px;
+    }
+
+    .headerpcol {
+        margin-top: 50px;
+    }
+
+
+</style>
+
+<section>
+    <div class="container-fluid">
+        <div class="row mt-5 row-cols-2 custom-row justify-content-start align-items-center">
+            <!-- first column -->
+            <div class="col md-6">
+                <div class="col mb-5">
+                    <h1 id="headerLine" class="label-control text-center">invested.</h1>
+                </div>
+                <div class="col headerpcol mt-7">
+                    <p id="headerParagraph" class="label-control text-center">Your personal finance Manager.</p>
+                </div>
+            </div>
+            <!-- secound column -->
+            <div class="col md-6">
+                <img src="~/images/buisnessicon-removebg-preview.png" width="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="second-section">
+    <div id="line"></div>
+    <div>
+        <div class="">
+
+        </div>
+
+    </div>
+</section>
+

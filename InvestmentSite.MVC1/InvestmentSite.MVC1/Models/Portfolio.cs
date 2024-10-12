@@ -2,10 +2,13 @@
 {
     public class Portfolio
     {
-        public int Id { get; set; } 
-        public int UserID { get; set; }
-        public List<IncomeItem> IncomeItems { get; set; } = new List<IncomeItem>();
-        public List<ExpenseItem> ExpenseItems { get; set; } = new List<ExpenseItem>();
+        public int Id { get; set; }
+        
+        public int UserId { get; set; }
+
+        public virtual ICollection<IncomeItem> IncomeItems { get; set; } = new HashSet<IncomeItem>();
+
+        public virtual ICollection<ExpenseItem> ExpenseItems { get; set; } = new HashSet<ExpenseItem>();
 
     }
 }
